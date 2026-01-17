@@ -1,30 +1,7 @@
-/* GENEL DEĞİŞKENLER VE RENK ŞEMASI */
 :root {
   --bg-color: #00458e;
   --btn-red: #ff0000;
-  color-scheme: light; /* Tarayıcının karanlık mod müdahalesini engeller */
-}
-
-/* TEMEL SAYFA AYARLARI */
-html {
-  overscroll-behavior: none; 
-  height: 100%;
-  background-color: var(--bg-color);
-}
-
-body {
-  background-color: var(--bg-color);
-  background-attachment: fixed;
-  margin: 0;
-  padding: 0;
-  font-family: 'Inter', -apple-system, sans-serif;
-  display: flex;
-  justify-content: center;
-  min-height: 100vh;
-  overflow-x: hidden;
-  overscroll-behavior-y: none;
-  -webkit-text-size-adjust: 100%;
-  color: #ffffff;
+  color-scheme: light;
 }
 
 * {
@@ -33,12 +10,25 @@ body {
   padding: 0;
 }
 
-/* YAZI RENKLERİ GÜVENCESİ */
-h1, p, .bio, .title, .footer-text {
-  color: #ffffff !important;
+html {
+  overscroll-behavior: none;
+  height: 100%;
+  background-color: var(--bg-color);
 }
 
-/* ANA KONTEYNER */
+body {
+  background-color: var(--bg-color);
+  background-attachment: fixed;
+  font-family: 'Inter', -apple-system, sans-serif;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  overflow-x: hidden;
+  overscroll-behavior-y: none;
+  -webkit-text-size-adjust: 100%;
+}
+
 .main-container {
   width: 90%;
   max-width: 800px;
@@ -47,10 +37,9 @@ h1, p, .bio, .title, .footer-text {
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: relative; /* Navigasyon butonlarının hizalanması için */
 }
 
-/* PROFİL ALANI */
+/* Profil */
 .profile-img-container {
   width: 150px;
   height: 150px;
@@ -69,6 +58,7 @@ h1, p, .bio, .title, .footer-text {
 h1 {
   font-size: 28px;
   margin-bottom: 5px;
+  color: #ffffff !important;
 }
 
 .title {
@@ -79,6 +69,8 @@ h1 {
   display: flex;
   justify-content: center;
   text-align: center;
+  padding: 0 10px;
+  color: #ffffff !important;
 }
 
 .bio {
@@ -87,21 +79,24 @@ h1 {
   margin-bottom: 35px;
   width: 100%;
   max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
   text-align: center;
+  color: #ffffff !important;
 }
 
-/* AYRAÇ (DIVIDER) */
+/* Ayraç */
 .divider {
   width: 100%;
   display: flex;
   align-items: center;
-  margin: 1px 0; 
+  margin: 1px 0;
 }
 
 .line {
   flex: 1;
   height: 1.5px;
-  background-color: white;
+  background-color: rgb(255, 255, 255);
 }
 
 .infinity {
@@ -109,7 +104,7 @@ h1 {
   font-size: 35px;
 }
 
-/* BUTONLAR */
+/* Butonlar */
 .button-list {
   width: 100%;
   display: flex;
@@ -142,13 +137,13 @@ h1 {
 }
 
 .white-btn {
-  background-color: white !important;
+  background-color: white;
   color: #1a1a1a !important;
 }
 
 .white-btn:hover {
-  background-color: #f0f0f0 !important;
-  color: var(--bg-color) !important;
+  background-color: #f0f0f0;
+  color: var(--bg-color);
 }
 
 .red-btn {
@@ -158,13 +153,35 @@ h1 {
 
 .red-btn:hover {
   background-color: #cc0000;
+  color: white;
 }
 
 .icon {
   margin-right: 10px;
 }
 
-/* ALT İKONLAR */
+/* Dikkat Çekme Animasyonu */
+@keyframes attentionPulse {
+  0% { transform: scale(1); }
+  2% { transform: scale(1.1) rotate(2deg); }
+  4% { transform: scale(1.1) rotate(-2deg); }
+  6% { transform: scale(1.1) rotate(2deg); }
+  8% { transform: scale(1); }
+  100% { transform: scale(1); }
+}
+
+.pulse-animation {
+  animation: attentionPulse 5s infinite ease-in-out;
+}
+
+.pulse-animation:hover {
+  animation-play-state: paused;
+  transform: scale(1.05) !important;
+  color: var(--bg-color) !important;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Alt Sosyal Medya İkonları */
 .footer-icons {
   display: flex;
   justify-content: center;
@@ -190,25 +207,6 @@ h1 {
   transform: scale(1.2);
 }
 
-/* ORİJİNAL MARKA RENKLERİ (HOVER DURUMU) */
-.social-icon[data-tooltip="WhatsApp"]:hover { color: #25D366 !important; transform: scale(1.25); }
-.social-icon[data-tooltip="X (Twitter)"]:hover { color: #000000 !important; transform: scale(1.2); }
-.social-icon[data-tooltip="Instagram"]:hover { color: #E1306C !important; transform: scale(1.25); }
-.social-icon[data-tooltip="YouTube"]:hover { color: #FF0000 !important; transform: scale(1.25); }
-.social-icon[data-tooltip="E-Posta"]:hover { color: #EA4335 !important; transform: scale(1.25); }
-.social-icon[data-tooltip="LinkedIn"]:hover { color: #0077B5 !important; transform: scale(1.25); }
-
-/* FOOTER METNİ */
-.footer-text {
-  margin-top: 40px;
-  font-size: 14px;
-  font-weight: 600;
-  opacity: 0.9;
-  letter-spacing: 0.5px;
-  padding-bottom: 20px;
-}
-
-/* TOOLTIP AYARLARI */
 .social-icon::after {
   content: attr(data-tooltip);
   position: absolute;
@@ -224,7 +222,7 @@ h1 {
   pointer-events: none;
   transition: all 0.2s ease-in-out;
   opacity: 0;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 .social-icon:hover::after {
@@ -232,7 +230,58 @@ h1 {
   transform: translateX(-50%) scale(1);
 }
 
-/* SOL ÜST NAVİGASYON (SABİT) */
+.social-icon:hover::before {
+  content: '';
+  position: absolute;
+  bottom: 130%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 6px;
+  border-style: solid;
+  border-color: rgba(0, 0, 0, 0.8) transparent transparent transparent;
+}
+
+.social-icon[data-tooltip="WhatsApp"]:hover {
+  color: #25D366 !important;
+  transform: scale(1.25);
+}
+
+.social-icon[data-tooltip="X (Twitter)"]:hover {
+  color: #000000 !important;
+  transform: scale(1.2);
+}
+
+.social-icon[data-tooltip="Instagram"]:hover {
+  color: #E1306C !important;
+  transform: scale(1.25);
+}
+
+.social-icon[data-tooltip="YouTube"]:hover {
+  color: #FF0000 !important;
+  transform: scale(1.25);
+}
+
+.social-icon[data-tooltip="E-Posta"]:hover {
+  color: #EA4335 !important;
+  transform: scale(1.25);
+}
+
+.social-icon[data-tooltip="LinkedIn"]:hover {
+  color: #0077B5 !important;
+  transform: scale(1.25);
+}
+
+.footer-text {
+  margin-top: 40px;
+  font-size: 14px;
+  font-weight: 600;
+  opacity: 0.9;
+  letter-spacing: 0.5px;
+  padding-bottom: 20px;
+  color: #ffffff !important;
+}
+
+/* Sol Üst Navigasyon Butonları */
 .side-nav {
   position: fixed;
   left: 20px;
@@ -243,54 +292,142 @@ h1 {
   z-index: 9999;
 }
 
-/* SAĞ ÜST PAYLAŞ (ÇAKILI) */
-.share-nav {
-  position: fixed !important;
-  right: 20px !important;
-  top: 20px !important;
-  z-index: 10000;
-  left: auto !important;
-  transform: none !important;
-}
-
-/* NAV VE SHARE BUTON ORTAK STİL */
-.nav-btn, .share-btn {
-  width: 55px;
-  height: 55px;
+.nav-btn {
+  width: 52px;
+  height: 52px;
   border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(0, 40, 80, 0.85);
   border: 1.5px solid rgba(255, 255, 255, 0.3);
   color: white;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+/* Sol Üst Navigasyon Butonları */
+.nav-btn svg {
+  width: 30px;  /* Burası şu an 32px, daha da büyütmek için 26px veya 28px yapabilirsin */
+  height: 30px;
+  stroke-width: 2.5;
+}
+/* Sağ Üst Paylaş Butonu ikonunu büyütmek için */
+.share-btn svg {
+  width: 30px;  /* İstediğin boyuta göre ayarla: 26px, 28px, 30px vb. */
+  height: 30px;
+  stroke-width: 2.5;
+}
+.nav-btn:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.nav-btn::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  left: 65px;
+  top: 50%;
+  transform: translateY(-50%) scale(0.8);
+  background-color: #000000;
+  color: #ffffff;
+  padding: 8px 15px;
+  border-radius: 6px;
+  font-size: 14px;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.nav-btn::before {
+  content: '';
+  position: absolute;
+  left: 54px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-width: 6px;
+  border-style: solid;
+  border-color: transparent #000000 transparent transparent;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.2s ease;
+}
+
+.nav-btn:hover::after,
+.nav-btn:hover::before {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(-50%) scale(1);
+}
+
+/* Sağ Üst Paylaş Butonu - SABİT */
+.share-nav {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  z-index: 10000;
+}
+
+.share-btn {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background-color: rgba(0, 40, 80, 0.85);
+  border: 1.5px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
   cursor: pointer;
   position: relative;
   transition: all 0.3s ease;
 }
 
-.nav-btn:hover, .share-btn:hover {
+.share-btn:hover {
   background-color: rgba(255, 255, 255, 0.2);
   transform: scale(1.1);
 }
 
-/* ANİMASYONLAR */
-@keyframes attentionPulse {
-  0% { transform: scale(1); }
-  2% { transform: scale(1.1) rotate(2deg); }
-  4% { transform: scale(1.1) rotate(-2deg); }
-  6% { transform: scale(1.1) rotate(2deg); }
-  8% { transform: scale(1); }
-  100% { transform: scale(1); }
+.share-btn::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  right: 65px;
+  top: 50%;
+  transform: translateY(-50%) scale(0.8);
+  background-color: #000000;
+  color: #ffffff;
+  padding: 8px 15px;
+  border-radius: 6px;
+  font-size: 14px;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
 }
 
-.pulse-animation {
-  animation: attentionPulse 5s infinite ease-in-out;
+.share-btn::before {
+  content: '';
+  position: absolute;
+  right: 54px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-width: 6px;
+  border-style: solid;
+  border-color: transparent transparent transparent #000000;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.2s ease;
+  
 }
 
-.pulse-animation:hover {
-  animation-play-state: paused; 
-  transform: scale(1.05) !important;
-  color: var(--bg-color) !important;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+.share-btn:hover::after,
+.share-btn:hover::before {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(-50%) scale(1);
 }
