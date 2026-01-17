@@ -1,6 +1,30 @@
 :root {
   --bg-color: #00458e;
   --btn-red: #ff0000;
+  /* Tarayıcının renkleri değiştirmesini engellemek için renk şemasını sabitleyelim */
+  color-scheme: light;
+}
+
+body {
+  /* ... mevcut ayarların ... */
+  -webkit-text-size-adjust: 100%; /* iOS'ta yazı boyutunun kendiliğinden büyümesini engeller */
+  color: #ffffff; /* Yazı rengini zorla beyaz yap */
+}
+
+/* Tüm yazıların beyaz kalmasını garanti altına al */
+h1, p, .bio, .title, .footer-text {
+  color: #ffffff !important;
+}
+
+/* Beyaz butonların içindeki yazıların siyah kalmasını garanti altına al */
+.white-btn {
+  color: #1a1a1a !important;
+}
+
+
+:root {
+  --bg-color: #00458e;
+  --btn-red: #ff0000;
 }
 
 /* 1. ZIPLAMAYI VE DIŞARI TAŞMAYI ENGELLEYEN KRİTİK AYARLAR */
