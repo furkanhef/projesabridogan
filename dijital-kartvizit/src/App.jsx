@@ -43,7 +43,7 @@ function App() {
   const vcard = `BEGIN:VCARD
 VERSION:3.0
 FN:Sabri Doğan
-ORG:Uzman Gayrimenkul Danışmanı | Remax
+ORG:Sabri Doğan Uzman Gayrimenkul Danışmanı | Remax
 TEL;TYPE=WORK,VOICE:02166420384
 TEL;TYPE=CELL,VOICE:+905057784619
 EMAIL:sabri.dogan@remax-isik-ist.com
