@@ -44,7 +44,7 @@ const vcard = `BEGIN:VCARD
 VERSION:3.0
 FN:Sabri Doğan
 N:Doğan;Sabri;;;
-TITLE:Uzman Gayrimenkul Danışmanı | RE/MAX
+TITLE:Profesyonel Gayrimenkul Danışmanı | RE/MAX
 ORG:RE/MAX Işık
 TEL;TYPE=WORK,VOICE:02166420384
 TEL;TYPE=CELL,VOICE:+905057784619
@@ -86,7 +86,7 @@ END:VCARD`;
       </div>
 
       <h1>Sabri Doğan</h1>
-      <p className="title">Uzman Gayrimenkul Danışmanı | RE/MAX</p>
+      <p className="title">Profesyonel Gayrimenkul Danışmanı | RE/MAX IŞIK</p>
 
       <div className="divider">
         <div className="line"></div>
@@ -95,17 +95,16 @@ END:VCARD`;
       </div>
 
       <p className="bio">
-        Merhaba, Ben Sabri DOĞAN. 1973 Tokat/Reşadiye doğumluyum.
-        Manisa Celal Bayar Üniversitesi Tarih bölümü mezunuyum. Uzun yıllar eğitim yöneticiliği 
-        ve eğitimci olarak çalıştım. RE/MAX Işık bünyesinde, gayrimenkul sektöründe fark yaratan sonuçlar üreten, 
-        müşteri odaklı ve yüksek performanslı Gayrimenkul Danışmanıyım.
+Merhabalar, ben Sabri Doğan.Gayrimenkul sektöründe 9 yıldır, dünyanın en köklü gayrimenkul markası RE/MAX’in, RE/MAX Işık ofisi çatısı altında profesyonel danışmanlık hizmeti veriyorum.
+Çalışma prensibim üç temel esas üzerine kuruludur: Şeffaflık, Hız ve Doğru Bilgi.
+Mülk sahiplerinin "gönül rahatlığıyla" çalışabileceği, sürecin her aşamasında şeffaf bir şekilde bilgilendirildiği ve doğru fiyatla hızlı sonuca ulaşıldığı bir hizmet sunuyorum. Gayrimenkulünüzü emin ellere teslim etmek isterseniz, bir telefon uzağınızdayım
       </p>
 
       <div className="button-list">
         <button onClick={downloadVCard} className="link-btn white-btn pulse-animation">
         <UserPlus className="icon" size={24} /> Rehbere Ekle
       </button>
-        <a href="https://remax.com.tr/tr/danisman/20362/sabri-dogan?tab=portfoylerim" target="_blank" rel="noreferrer" className="link-btn white-btn">
+        <a href="https://www.sahibinden.com/arama?utm_campaign=sahibinden_paylas&utm_medium=arama_sonuc&userId=bjXApjKXImL0gVjfeVMSS7A&utm_source=paylas&utm_content=174536269" target="_blank" rel="noreferrer" className="link-btn white-btn">
           <Flag className="icon" size={24} /> İlanlarım
         </a>
         <a href="https://www.instagram.com/sabridoganremax/" target="_blank" rel="noreferrer" className="link-btn white-btn">
