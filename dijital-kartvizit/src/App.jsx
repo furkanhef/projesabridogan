@@ -44,7 +44,7 @@ const vcard = `BEGIN:VCARD
 VERSION:3.0
 FN:Sabri Doğan
 N:Doğan;Sabri;;;
-TITLE:Profesyonel Gayrimenkul Danışmanı | RE/MAX
+TITLE:Profesyonel Gayrimenkul Danışmanı | RE/MAX IŞIK
 ORG:RE/MAX Işık
 TEL;TYPE=WORK,VOICE:02166420384
 TEL;TYPE=CELL,VOICE:+905057784619
