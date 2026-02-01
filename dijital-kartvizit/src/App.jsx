@@ -107,7 +107,7 @@ Mülk sahiplerinin "gönül rahatlığıyla" çalışabileceği, sürecin her a�
         <a href="https://www.sahibinden.com/arama?utm_campaign=sahibinden_paylas&utm_medium=arama_sonuc&userId=bjXApjKXImL0gVjfeVMSS7A&utm_source=paylas&utm_content=174536269" target="_blank" rel="noreferrer" className="link-btn white-btn">
           <Flag className="icon" size={24} /> İlanlarım
         </a>
-        <a href="https://www.instagram.com/sabridoganremax/" target="_blank" rel="noreferrer" className="link-btn white-btn">
+        <a href="https://www.instagram.com/remax.sabridogan/" target="_blank" rel="noreferrer" className="link-btn white-btn">
           <Instagram className="icon" size={24} /> Instagram
         </a>
         <a href="https://remax.com.tr/tr/hakkimizda" target="_blank" rel="noreferrer" className="link-btn red-btn">
